@@ -1,0 +1,53 @@
+﻿@model List<BoulevardResidence.Domain.Entity.Apartments.Apartment>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<section class="pandora-container">
+    <div class="container">
+        <div class="row">
+            <div class="pandora-banner-div">
+                <h3 class="pandora-banner-title">Gallery</h3>
+                <button class="addnewb"><a asp-action="Create" asp-controller="Apartment">Add new</a></button>
+            </div>
+            <div style="margin-top:3rem;">
+                <div class="container-p">
+                    <div class="row">
+                        <div class="col-12">
+                            @if (Model.Count() > 0)
+                            {
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Image</th>
+                                            <th class="text-center">Gallery Category Name</th>
+                                            <th class="text-center" scope="col">Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var blog in Model)
+                                        {
+                                            
+                                                <tr data-id="@blog.Id" class="slider-row">
+                                                    @*<td><img style="width:27%" class="table-img" src="~/boulevardgallery/@blog.Image" /></td>*@
+                                                    <td class="text-center">@blog.Floor</td>
+                                                    <td class="p-buttons" class="text-center">
+                                                        <a class="btn btn-outline-primary" asp-action="Detail" asp-route-id="@blog.Id">Detail</a>
+                                                        <a class="btn btn-outline-primary" asp-action="Edit" asp-route-id="@blog.Id">Edit</a>
+                                                        <a class="delete-blog" data-id="@blog.Id" data-toggle="tooltip" data-original-title="Remove" style="cursor: pointer;">
+                                                            <i class="fa-solid fa-trash" style="color: #c81921;" onmouseover="this.style.color='#ff0000';" onmouseout="this.style.color='#c81921';"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            
+                                        }
+                                    </tbody>
+                                </table>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

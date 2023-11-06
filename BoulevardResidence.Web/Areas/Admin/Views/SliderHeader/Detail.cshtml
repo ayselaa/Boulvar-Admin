@@ -1,0 +1,26 @@
+﻿@model SliderHeaderDetailVM
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<div class="sliderdetails">
+
+<h1>Everyting for your Comfort Details</h1>
+
+<h4>Translations:</h4>
+
+@foreach (var translate in Model.Translates)
+{
+    <div>
+        <h5>@translate.LangCode</h5>
+        <p>Tittle: @translate.Tittle</p>
+        <p>Description: @translate.Description</p>
+    </div>
+
+    <hr />
+}
+
+    <a class="detail-back" asp-action="Index">Back to List</a>
+
+</div>
+
