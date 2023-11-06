@@ -20,7 +20,7 @@
                                     <thead>
                                         <tr>
                                             <th scope="col">Image</th>
-                                            <th class="text-center">Gallery Category Name</th>
+                                            <th class="text-center" style="width:300px;">Gallery Category Name</th>
                                             <th class="text-center" scope="col">Actions</th>
                                         </tr>
                                     </thead>
@@ -31,9 +31,9 @@
                                                 <tr data-id="@blog.Id" class="slider-row">
                                                     <td><img style="width:27%" class="table-img" src="~/boulevardgallery/@blog.Image" /></td>
                                                     <td class="text-center">@blog.GalleryCategoryName</td>
-                                                    <td class="p-buttons" class="text-center">
-                                                        <a class="btn btn-outline-primary" asp-action="Detail" asp-route-id="@blog.Id">Detail</a>
-                                                        <a class="btn btn-outline-primary" asp-action="Edit" asp-route-id="@blog.Id">Edit</a>
+                                                <td class="p-buttons text-center">
+                                                        <a class="btn btn-green-color" asp-action="Detail" asp-route-id="@blog.Id">Detail</a>
+                                                    <a class="btn btn-orange-color" asp-action="Edit" asp-route-id="@blog.Id">Edit</a>
                                                         <a class="delete-blog" data-id="@blog.Id" data-toggle="tooltip" data-original-title="Remove" style="cursor: pointer;">
                                                             <i class="fa-solid fa-trash" style="color: #c81921;" onmouseover="this.style.color='#ff0000';" onmouseout="this.style.color='#c81921';"></i>
                                                         </a>

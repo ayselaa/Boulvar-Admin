@@ -7,23 +7,22 @@
 
 <h1>Architecutral Elegance blog Details</h1>
 
-<div>
+    <div class="mt-div">
     <h4>Slider ID: @Model.Id</h4>
-    <img src="~/comfortbloggallery/@Model.Image" class="img-fluid" alt="Slider Image">
+    <img style="width:15%; padding-bottom:2rem;" src="~/comfortbloggallery/@Model.Image" class="img-fluid" alt="Slider Image">
 </div>
 
-<hr />
 
 <h4>Translations:</h4>
 
 @foreach (var translate in Model.Translates)
 {
-    <div>
+        <div class="width50">
         <h5>@translate.LangCode</h5>
         <p>Description: @translate.Description</p>
+    <hr />
     </div>
 
-    <hr />
 }
 
     <a class="detail-back" asp-action="Index">Back to List</a>

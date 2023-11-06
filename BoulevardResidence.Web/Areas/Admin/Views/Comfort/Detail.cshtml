@@ -7,17 +7,17 @@
 
 <h1>Everyting for your Comfort Details</h1>
 
-<h4>Translations:</h4>
+    <h4 class="mt-div">Translations:</h4>
 
 @foreach (var translate in Model.Translates)
 {
-    <div>
+        <div class="width50">
         <h5>@translate.LangCode</h5>
         <p>Name: @translate.Name</p>
         <p>Header: @translate.Header</p>
+    <hr />
     </div>
 
-    <hr />
 }
 
     <a class="detail-back" asp-action="Index">Back to List</a>

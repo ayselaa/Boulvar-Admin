@@ -30,9 +30,9 @@
 
                                             <tr data-id="@slider.Id" class="slider-row">
                                                 <td><img style="width:27%" class="table-img" src="~/slidergallery/@slider.Image" /></td>
-                                                <td class="p-buttons text-center">
-                                                    <a class="btn btn-outline-primary" asp-action="Detail" asp-route-id="@slider.Id">Detail</a>
-                                                    <a class="btn btn-outline-primary" asp-action="Edit" asp-route-id="@slider.Id">Edit</a>
+                                                <td class="p-buttons text-center" style="display: flex; justify-content: space-between;">
+                                                    <a class="btn btn-green-color" asp-action="Detail" asp-route-id="@slider.Id">Detail</a>
+                                                    <a class="btn btn-orange-color" asp-action="Edit" asp-route-id="@slider.Id">Edit</a>
                                                     <a class="delete-slider" data-id="@slider.Id" data-toggle="tooltip" data-original-title="Remove" style="cursor: pointer;">
                                                         <i class="fa-solid fa-trash" style="color: #c81921;" onmouseover="this.style.color='#ff0000';" onmouseout="this.style.color='#c81921';"></i>
                                                     </a>
